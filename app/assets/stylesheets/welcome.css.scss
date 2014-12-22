@@ -7,12 +7,10 @@
 
 .container{
 	@include outer-container;
-
 }
 
 .logo{
 	background: white;
-	width: 200px;
 	height: 200px;
 	opacity: 0.7;
 	@include span-columns(3);
@@ -20,32 +18,47 @@
 
 .empty1{
 	background: white;
-	width: 200px;
 	height: 200px;
 	opacity: 0.7;
 	@include span-columns(6);
-
 }
 
 .menu{
 	background: white;
-	width: 340px;
 	height: 130px;
+	opacity: 0.7;
+	@include span-columns(3);
+	@include omega();
+}
+
+.empty2{
+	background: white;
 	opacity: 0.7;
 	@include span-columns(3);
 }
 
 .screen{
 	background: white;
-	width: 860px;
+	min-width: 640px;
+	max-width: 640px;
 	height: 400px;
 	opacity: 0.7;
-;
+	margin-top:20px; 
+	@include shift(3);
+	@include span-columns(6);
 }
 
+
+.empty3{
+	background: white;
+	opacity: 0.7;
+	@include span-columns(3);
+}
 
 body{
 	background-image: asset-url("00.jpg");
 	background-size: 100%;
+	background-repeat: no-repeat
+
 }
 
