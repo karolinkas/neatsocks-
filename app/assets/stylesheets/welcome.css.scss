@@ -5,6 +5,8 @@
 @import "bourbon";
 @import "neat";
 
+// $grid-columns: 5 !global;
+
 .container{
 	@include outer-container;
 }
@@ -46,6 +48,7 @@
 	margin-top:20px; 
 	@include shift(3);
 	@include span-columns(6);
+	@include omega();
 }
 
 
@@ -53,6 +56,10 @@
 	background: white;
 	opacity: 0.7;
 	@include span-columns(3);
+}
+
+.image{
+
 }
 
 body{
