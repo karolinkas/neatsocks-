@@ -27,7 +27,7 @@ $grid-columns: 5;
 
 .menu{
 	background: white;
-	height: 130px;
+	height: 200px;
 	opacity: 0.7;
 	@include span-columns(2);
 	@include omega();
@@ -58,10 +58,10 @@ $grid-columns: 5;
 	@include span-columns(1);
 }
 
-.table{
-	background: white;
-	opacity: 0.7;
-	height: 250px;
+.ontable{
+	// background: white;
+	// opacity: 0.7;
+	height: 2px;
 	margin-top: -150px;
 	@include span-columns(5);
 }
@@ -69,15 +69,18 @@ $grid-columns: 5;
 .image{
 	background: tomato;
 	opacity: 0.7;
-	height: 200px;	
+	height: 200px;
 	@include span-columns(1 of 5);
 }
 
 .player{
 	background: tomato;
 	opacity: 0.7;
-	height: 50px;	
+	height: 50px;
+	margin-top: 150px;	
 	@include span-columns(3 of 5);
+
+
 }
 
 .lamp{
@@ -85,6 +88,14 @@ $grid-columns: 5;
 	opacity: 0.7;
 	height: 200px;	
 	@include span-columns(1 of 5);
+	@include omega();
+}
+
+.table{
+	background: white;
+	opacity: 0.7;
+	height: 150px;
+	@include span-columns(5);
 }
 
 body{
