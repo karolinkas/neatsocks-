@@ -1,0 +1,51 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bourbon";
+@import "neat";
+
+.container{
+	@include outer-container;
+
+}
+
+.logo{
+	background: white;
+	width: 200px;
+	height: 200px;
+	opacity: 0.7;
+	@include span-columns(3);
+}
+
+.empty1{
+	background: white;
+	width: 200px;
+	height: 200px;
+	opacity: 0.7;
+	@include span-columns(6);
+
+}
+
+.menu{
+	background: white;
+	width: 340px;
+	height: 130px;
+	opacity: 0.7;
+	@include span-columns(3);
+}
+
+.screen{
+	background: white;
+	width: 860px;
+	height: 400px;
+	opacity: 0.7;
+;
+}
+
+
+body{
+	background-image: asset-url("00.jpg");
+	background-size: 100%;
+}
+
