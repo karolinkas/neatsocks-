@@ -5,49 +5,49 @@
 @import "bourbon";
 @import "neat";
 
-// $grid-columns: 5 !global;
+$grid-columns: 5;
 
 .container{
-	@include outer-container;
+	@include outer-container();
 }
 
 .logo{
 	background: white;
 	height: 200px;
 	opacity: 0.7;
-	@include span-columns(3);
+	@include span-columns(2);
 }
 
 .empty1{
 	background: white;
 	height: 200px;
 	opacity: 0.7;
-	@include span-columns(6);
+	@include span-columns(1);
 }
 
 .menu{
 	background: white;
 	height: 130px;
 	opacity: 0.7;
-	@include span-columns(3);
+	@include span-columns(2);
 	@include omega();
 }
 
 .empty2{
 	background: white;
 	opacity: 0.7;
-	@include span-columns(3);
+	@include span-columns(1);
 }
 
 .screen{
 	background: white;
+	opacity: 0.7;
 	min-width: 640px;
 	max-width: 640px;
 	height: 400px;
-	opacity: 0.7;
 	margin-top:20px; 
-	@include shift(3);
-	@include span-columns(6);
+	@include shift(1);
+	@include span-columns(2);
 	@include omega();
 }
 
@@ -55,11 +55,36 @@
 .empty3{
 	background: white;
 	opacity: 0.7;
-	@include span-columns(3);
+	@include span-columns(1);
+}
+
+.table{
+	background: white;
+	opacity: 0.7;
+	height: 250px;
+	margin-top: -150px;
+	@include span-columns(5);
 }
 
 .image{
+	background: tomato;
+	opacity: 0.7;
+	height: 200px;	
+	@include span-columns(1 of 5);
+}
 
+.player{
+	background: tomato;
+	opacity: 0.7;
+	height: 50px;	
+	@include span-columns(3 of 5);
+}
+
+.lamp{
+	background: tomato;
+	opacity: 0.7;
+	height: 200px;	
+	@include span-columns(1 of 5);
 }
 
 body{
