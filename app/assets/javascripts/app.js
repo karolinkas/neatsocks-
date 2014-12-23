@@ -5,6 +5,7 @@ $(function() {
     document.querySelector('button#fire').onclick = function() {
         send(document.querySelector('#send').value);
         document.querySelector('#send').value = '';
+      
     };
 
     document.querySelector('button#left').onclick = function() {
