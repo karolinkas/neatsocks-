@@ -8,23 +8,31 @@ $(function() {
     };
 
     document.querySelector('button#left').onclick = function() {
-        move(document.querySelector('button#left').value = "l");
-        document.querySelector('button#left').value = '';
-        
-        console.log(document.querySelector('button#left').value);
-
+        // direction += "l";
+        move();
+        console.log("clicked");
     };
 
     dispatcher.bind('new_message',
         function(message) {
             document.querySelector('#messages').innerHTML += '<li>' + message + '</li>';
         })
+
+    dispatcher.bind('go_left',
+        function(direction) {
+            document.querySelector('#directions').innerHTML += '<p>' + "l" + '</p>';
+            console.log("bind");
+        })
+
+
 });
 // Here we send the message in the websocket
 function send(message) {
     dispatcher.trigger('new_message', message);
 }
 
-function move(message) {
-    dispatcher.trigger('go_left', message);
+// we are sendind the direction command
+function move() {
+    dispatcher.trigger('go_left');
+    console.log("triggered");
 }
