@@ -11,7 +11,6 @@ $grid-columns: 5;
 	@include outer-container();
 		min-width: 80%;
 		max-width: 100%;
-
 }
 
 .logo{
@@ -88,7 +87,6 @@ $grid-columns: 5;
 	height: 6em;
 	margin-top: 97px;	
 	@include span-columns(1 of 5);
-
 }
 
 .lamp{
@@ -103,8 +101,8 @@ $grid-columns: 5;
 	background: white;
 	opacity: 0.7;
 	height: 12em;
-	// @include shift(1);
 	@include span-columns(5);
+	@include omega();
 }
 
 .buttonbox{
@@ -127,6 +125,12 @@ body{
 	background-image: asset-url("01.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat
-
 }
 
+#messages{
+	color: grey;
+}
+
+#echo{
+	@include span-columns(5);
+}

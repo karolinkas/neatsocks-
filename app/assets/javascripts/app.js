@@ -11,7 +11,7 @@ $(function() {
         move(document.querySelector('button#left').value = "l");
         document.querySelector('button#left').value = '';
         
-        // console.log(document.querySelector('button#left').value);
+        console.log(document.querySelector('button#left').value);
 
     };
 

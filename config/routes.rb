@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  resources :connections
+  # get 'remote/navigate', to: 'remote#navigate'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
