@@ -9,29 +9,34 @@ $grid-columns: 5;
 
 .container{
 	@include outer-container();
-		min-width: 98%;
-		max-width: 98%;
+		min-width: 80%;
+		max-width: 100%;
 
 }
 
 .logo{
-	background: white;
-	height: 12em;
-	opacity: 0.7;
-	@include span-columns(2);
+		background: white;
+		height: 20%;
+		opacity: 0.7;
+		@include span-columns(1);
+}
+
+.logo img{
+		max-width:100%;
+		height:auto;
 }
 
 .empty1{
-	background: white;
-	height: 12em;;
-	opacity: 0.7;
-	@include span-columns(1);
+	height: 12em;
+	@include span-columns(2);
 }
+
 
 .menu{
 	background: white;
-	height: 12em;;
+	height: 6em;
 	opacity: 0.7;
+	// margin-left: 10em;
 	@include span-columns(2);
 	@include omega();
 }
@@ -45,7 +50,7 @@ $grid-columns: 5;
 .screen{
 	background: white;
 	opacity: 0.7;
-	min-width: 640px;
+	min-width: 821px;
 	max-width: 640px;
 	height: 400px;
 	margin-top:20px; 
@@ -65,7 +70,7 @@ $grid-columns: 5;
 	// background: white;
 	// opacity: 0.7;
 	height: 2px;
-	margin-top: -150px;
+	margin-top: -117px;
 	@include span-columns(5);
 }
 
@@ -73,6 +78,7 @@ $grid-columns: 5;
 	background: tomato;
 	opacity: 0.7;
 	height: 12em;
+	@include shift(1);
 	@include span-columns(1 of 5);
 }
 
@@ -81,7 +87,7 @@ $grid-columns: 5;
 	opacity: 0.7;
 	height: 6em;
 	margin-top: 97px;	
-	@include span-columns(3 of 5);
+	@include span-columns(1 of 5);
 
 }
 
@@ -97,20 +103,25 @@ $grid-columns: 5;
 	background: white;
 	opacity: 0.7;
 	height: 12em;
+	// @include shift(1);
 	@include span-columns(5);
 }
 
 .buttonbox{
 	position: relative;
-	margin-top: 7%;
+	margin-top: 6%;
 	left:20%;
 }
 
 button.feature{
 	width: 20em;
+	margin: 1em;
 }
 
-
+img{
+	max-width: 100%;
+	height: auto;
+}
 
 body{
 	background-image: asset-url("01.jpg");
