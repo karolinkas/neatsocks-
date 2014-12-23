@@ -10,7 +10,7 @@ $(function() {
     document.querySelector('button#left').onclick = function() {
         // direction += "l";
         move();
-        console.log("clicked");
+        $(".image").css("background","MEDIUMSPRINGGREEN")
     };
 
     dispatcher.bind('new_message',
@@ -21,7 +21,6 @@ $(function() {
     dispatcher.bind('go_left',
         function(direction) {
             document.querySelector('#directions').innerHTML += '<p>' + "l" + '</p>';
-            console.log("bind");
         })
 
 
@@ -34,5 +33,5 @@ function send(message) {
 // we are sendind the direction command
 function move() {
     dispatcher.trigger('go_left');
-    console.log("triggered");
+
 }

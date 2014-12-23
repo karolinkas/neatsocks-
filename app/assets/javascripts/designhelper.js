@@ -5,7 +5,7 @@ ready = function() {
 
 	$('.pull-down').each(function() {
 	    $(this).css('margin-bottom', $(this).parent().height()-$(this).height())
-	});
+		});
 		
 	} 
 
