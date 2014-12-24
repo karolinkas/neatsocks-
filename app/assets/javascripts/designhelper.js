@@ -4,7 +4,7 @@ var ready;
 ready = function() {
 
 	$('.pull-down').each(function() {
-	    $(this).css('margin-bottom', $(this).parent().height()-$(this).height())
+	    $(this).css('margin-top', ($(this).parent().height()-$(this).height())+50)
 		});
 		
 	} 
