@@ -60,8 +60,8 @@ $gutter: 50px;
 		@include omega();
 			
 			img{
-			 
-			}
+			 // border: 1px solid red;
+		}
 
 	}
 
@@ -109,18 +109,17 @@ $gutter: 50px;
 
 	
 	.table{
-
-		// background: white;
-		// opacity: 0.7;
+		background: white;
+		opacity: 0.7;
 		height: 12em;
-		// @include shift(1);
+		@include shift(-1);
 		@include span-columns(5);
 		@include omega();
 			img{
-				// max-width: 108%;
-				position: absolute;
+				max-width: 86em;
+				margin-top: -46em;
 				z-index: -1000;
-				margin-top:-48em;
+	
 			}
 	}
 
@@ -137,8 +136,7 @@ $gutter: 50px;
 	}
 
 	img{
-		// border: 1px solid red;
-		max-width: 90%;
+		max-width: 100%;
 		height: auto;
 	}
 
@@ -147,7 +145,7 @@ $gutter: 50px;
 
 
 body{
-	background-color: #C0C1BE;
+	background: #C4C2C1;
 	// background-image: asset-url("background.png");
 	// background-size: 100%;
 	// background-repeat: no-repeat
