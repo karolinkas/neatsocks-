@@ -7,6 +7,8 @@ WebsocketRails::EventMap.describe do
   subscribe :new_message, to: ConnectionsController, with_method: :new_message
 
   subscribe :go_left, to: ConnectionsController, with_method: :go_left
+
+  subscribe :go_right, to: ConnectionsController, with_method: :go_right
   #
   # Here is an example of mapping namespaced events:
   #   namespace :product do

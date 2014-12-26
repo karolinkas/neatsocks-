@@ -35,12 +35,16 @@ $grid-columns: 5;
 
 
 	.menu{
-		background: white;
-		opacity: 0.7;
 		height: 6em;
 		// margin-left: 10em;
 		@include span-columns(2);
 		@include omega();
+			img{
+				position: fixed;
+				top: -1em;
+				right: 1em;
+				width: 23em;
+			}
 	}
 
 	.empty2{
