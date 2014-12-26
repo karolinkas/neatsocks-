@@ -5,17 +5,15 @@ class ConnectionsController < WebsocketRails::BaseController
     	broadcast_message :new_message, 'Writing: ' + message
   	end
 
-  
   	def go_left
   	# sending direction after button press
-  		broadcast_message :go_left, direction
+  		broadcast_message :go_left, "Direction: l" 
   	end
 
   	def go_right
   	# sending direction after button press
-  		broadcast_message :go_right, direction
+  		broadcast_message :go_left, "Direction: r" 
   	end
 
 
-  	
 end

@@ -9,11 +9,57 @@ $(function() {
 
     };
 
-    document.querySelector('button.remote').onclick = function() {       
+    document.querySelector('button#left').onclick = function() {
+        // direction += "l";
+        move();
+
+        var selected = $(".feature.active");
       
-      move(this.id);       
+       
+        if ( $(".feature:first").hasClass("active")) {
+              $(".feature:last").addClass("active");
+              $(".feature:first").removeClass("active")
+            } else {
+              selected.prev(".feature").addClass("active");
+              selected.removeClass("active");
+        }
+      
+
+        // if ($(".feature:nth-child(2)").hasClass("active")) {
+        //     $(".feature:nth-child(1)").addClass("active");
+        //     $(".feature:nth-child(2)").removeClass("active");
+        //     $(".feature:nth-child(3)").removeClass("active");
+
+        // } else if ($(".feature:nth-child(3)").hasClass("active")) {
+        //     $(".feature:nth-child(2)").addClass("active");
+        //     $(".feature:nth-child(3)").removeClass("active");
+        //     $(".feature:nth-child(1)").removeClass("active");
+
+        // } else {
+        //    $(".feature:nth-child(3)").addClass("active");
+        //    $(".feature:nth-child(1)").removeClass("active");
+        //    $(".feature:nth-child(2)").removeClass("active");
+        // }
 
     };
+
+    document.querySelector('button#right').onclick = function() {
+        // direction += "l";
+        move();
+        
+        var selected = $(".feature.active");
+      
+        // if (selected.)
+        if ( $(".feature:last").hasClass("active")) {
+              $(".feature:first").addClass("active");
+              $(".feature:last").removeClass("active")
+            } else {
+              selected.next(".feature").addClass("active");
+              selected.removeClass("active");
+        }
+
+    };
+
 
 
     dispatcher.bind('new_message',
@@ -21,51 +67,14 @@ $(function() {
             document.querySelector('#messages').innerHTML += '<li>' + message + '</li>';
         })
 
-    dispatcher.bind('move_arrow',
-        function(direction) {
-
-
+    dispatcher.bind('go_left',
+        function() {
             document.querySelector('#directions').innerHTML += '<p>' + "l" + '</p>';
-
-          if ($(".feature:nth-child(2)").hasClass("active")) {
-              $(".feature:nth-child(1)").addClass("active");
-              $(".feature:nth-child(2)").removeClass("active");
-              $(".feature:nth-child(3)").removeClass("active");
-
-          } else if ($(".feature:nth-child(3)").hasClass("active")) {
-              $(".feature:nth-child(2)").addClass("active");
-              $(".feature:nth-child(3)").removeClass("active");
-              $(".feature:nth-child(1)").removeClass("active");
-
-          } else {
-             $(".feature:nth-child(1)").addClass("active");
-             $(".feature:nth-child(3)").removeClass("active");
-             $(".feature:nth-child(2)").removeClass("active");
-          }
-
-
         })
 
-    dispatcher.bind('move_arrow',
-        function(direction) {
+    dispatcher.bind('go_right',
+        function() {
             document.querySelector('#directions').innerHTML += '<p>' + "r" + '</p>';
-
-          if ($(".feature:nth-child(2)").hasClass("active")) {
-              $(".feature:nth-child(3)").addClass("active");
-              $(".feature:nth-child(2)").removeClass("active");
-              $(".feature:nth-child(1)").removeClass("active");
-
-          } else if ($(".feature:nth-child(3)").hasClass("active")) {
-              $(".feature:nth-child(1)").addClass("active");
-              $(".feature:nth-child(2)").removeClass("active");
-              $(".feature:nth-child(3)").removeClass("active");
-
-          } else {
-             $(".feature:nth-child(2)").addClass("active");
-             $(".feature:nth-child(1)").removeClass("active");
-             $(".feature:nth-child(3)").removeClass("active");
-          }
-
         })
 
 
@@ -76,13 +85,12 @@ function send(message) {
 }
 
 // we are sendind the direction command
-function move(direction) {
-    dispatcher.trigger('move_left');
-}
-
-function move(direction) {
-    dispatcher.trigger('move_right');
+function move() {
+    dispatcher.trigger('go_left');
 
 }
 
+function move() {
+    dispatcher.trigger('go_right');
 
+}

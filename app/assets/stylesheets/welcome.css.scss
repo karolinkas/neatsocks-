@@ -150,9 +150,15 @@ $grid-columns: 5;
 		// height: auto;
 	}
 
+	#logodown{
+			// position: fixed;
+			margin-top: -4.5em;
+			width: 18em;
+			@include span-columns(1);
+			@include shift(4);
+	}
+
 }
-
-
 
 body{
 	background: #C4C2C1;
