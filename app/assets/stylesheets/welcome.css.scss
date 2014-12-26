@@ -111,7 +111,7 @@ $grid-columns: 5;
 
 	
 	.table{
-		background: white;
+		// background: white;
 		opacity: 0.7;
 		height: 12em;
 		// @include shift(-1);
@@ -126,11 +126,15 @@ $grid-columns: 5;
 		.buttonbox{
 			position: relative;
 			margin-top: 8%;
-			left:20%;
+			left:23%;
 
 			button.feature{
 				width: 20em;
 				margin: 1em;
+			
+			}
+			button.feature.active{
+				background: MEDIUMSPRINGGREEN;
 			
 			}
 		}
@@ -158,5 +162,6 @@ body{
 }
 
 #echo{
+	margin-top:5em;
 	@include span-columns(5);
 }
