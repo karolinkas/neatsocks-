@@ -178,4 +178,10 @@ body{
 #echo{
 	margin-top:5em;
 	@include span-columns(5);
+
+	#timetogo{
+		width: 100px;
+		height: 30px;
+		background: turquoise;
+	}
 }

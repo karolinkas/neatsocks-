@@ -1,4 +1,8 @@
 $(function() {
+
+    CreateTimer("timer",30);
+    
+
     $(".feature:nth-child(2)").addClass("active");
     // Here we instantiate a new WebSocketRails instance
     dispatcher = new WebSocketRails($('#echo').data('uri'), true)
@@ -76,6 +80,8 @@ function moveright() {
 
 
 
+
+// should help to fixing z-index difficulties
 function findHighestZIndex(elem)
 {
   var elems = document.getElementsByTagName(elem);
@@ -90,3 +96,35 @@ function findHighestZIndex(elem)
   }
   return highest;
 }
+
+
+// should count 30 seconds
+
+
+var Timer;
+var TotalSeconds;
+
+
+function CreateTimer(TimerID, Time) {
+  Timer = $("#timetogo");
+  TotalSeconds = Time;
+
+  UpdateTimer();
+  window.setTimeout("Tick()", 1000);
+  
+}
+
+function Tick() {
+  TotalSeconds -= 1;
+  UpdateTimer()
+  window.setTimeout("Tick()", 1000);
+}
+
+function UpdateTimer() {
+  Timer.html(TotalSeconds);
+  console.log(Timer.innerHTML);
+ 
+}
+
+
+ 

@@ -33,6 +33,8 @@ gem 'websocket-rails'
 gem 'neat'
 
 gem 'shortener'
+
+gem 'activeadmin', github: 'activeadmin'
 # Use unicorn as the app server
 # gem 'unicorn'
 
