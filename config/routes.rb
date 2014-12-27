@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  get 'welcome/remote' => 'welcome#remote'
-
   get "/remote" => 'welcome#remote'
 
-  match '/:id' => "shortener/shortened_urls#show"
+  get "analytics/index" => 'analytics#index'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
