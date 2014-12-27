@@ -1,6 +1,6 @@
 $(function() {
 
-    CreateTimer("timer",30);
+    // CreateTimer("timer",30);
     
 
     $(".feature:nth-child(2)").addClass("active");
@@ -60,6 +60,9 @@ $(function() {
             }
         })
 
+    $("#timeout").click(function(){
+      CreateTimer("timer",30);
+      });
 
 });
 // Here we send the message in the websocket
@@ -115,8 +118,11 @@ function CreateTimer(TimerID, Time) {
 }
 
 function Tick() {
+  if (TotalSeconds <= 0) {
+    return;
+  }
   TotalSeconds -= 1;
-  UpdateTimer()
+  UpdateTimer();
   window.setTimeout("Tick()", 1000);
 }
 
