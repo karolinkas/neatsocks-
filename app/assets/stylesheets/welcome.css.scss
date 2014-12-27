@@ -6,6 +6,7 @@
 @import "neat";
 
 $grid-columns: 5;
+$elements: project-covers, sorting-bar, modals, navigation;
 
 
 .container{
@@ -80,6 +81,7 @@ $grid-columns: 5;
 		height: 2px;
 		margin-top: -10%;
 		@include span-columns(5);
+		z-index: 1500;
 	}
 
 	.image{
@@ -122,10 +124,10 @@ $grid-columns: 5;
 		@include span-columns(5);
 		@include omega();
 			img{
-				opacity: 0%;
+				// opacity: 0%;
 				max-width: 86em;
 				margin-top: -46em;
-				z-index: -1000;
+				z-index: 1500;
 			}
 		.buttonbox{
 			position: relative;
@@ -152,9 +154,11 @@ $grid-columns: 5;
 
 	#logodown{
 			// position: fixed;
-			margin-top: -4.5em;
-			width: 18em;
-			@include span-columns(1);
+			margin-top: -8.5em;
+			max-width: 20em;
+			height: auto;
+			z-index: -1000;
+			@include span-columns(2);
 			@include shift(4);
 	}
 

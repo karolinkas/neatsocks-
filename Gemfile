@@ -32,6 +32,7 @@ gem 'websocket-rails'
 
 gem 'neat'
 
+gem 'shortener'
 # Use unicorn as the app server
 # gem 'unicorn'
 
