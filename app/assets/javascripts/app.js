@@ -8,6 +8,7 @@ $(function() {
         // We send the message when we push the 'send' button
     document.querySelector('button#fire').onclick = function() {
         send(document.querySelector('#send').value);
+        $("#send").focus();
         document.querySelector('#send').value = '';
 
     };
