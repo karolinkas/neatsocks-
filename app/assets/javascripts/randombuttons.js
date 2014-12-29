@@ -1,4 +1,4 @@
-$(function() {
+function createFeaturesRandomly() {
 
     var featureNames = ["Buscador inteligente", "Control del directo", "Grabación", "Aplicaciones", "Multipantalla", "Emisión", "Sugerencias"]
 
@@ -25,7 +25,7 @@ $(function() {
     }
 
     var randNames = shuffle(featureNames);
-    console.log(randNames);
+    // console.log(randNames);
 
 
 
@@ -37,4 +37,4 @@ $(function() {
 
 
 
-})
+}

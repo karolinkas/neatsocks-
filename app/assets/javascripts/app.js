@@ -2,7 +2,10 @@
 
 $(function() {
 
+    createFeaturesRandomly();
+
     $(".feature:nth-child(2)").addClass("active");
+
     // Here we instantiate a new WebSocketRails instance
     dispatcher = new WebSocketRails($('#echo').data('uri'), true)
         // We send the message when we push the 'send' button
@@ -61,6 +64,66 @@ $(function() {
             }
         })
 
+    var playThis = new Boolean();
+    var chosenFeature = "";
+
+    $('#enter').click(function(){
+        var playThis = true;
+        }
+    )
+
+    
+
+    var chosenFeature = $(".feature").html(); 
+    switch (chosenFeature)
+    {
+       case "Buscador inteligente":
+
+            if ( $(".feature").hasClass("active")&&playThis ){
+                alert('BUS');
+            }
+
+       case "Control del directo":
+            
+            if ( $(".feature").hasClass("active")&&playThis ){
+                alert('CON');
+            }
+
+       case "Grabación":   
+
+            if ( $(".feature").hasClass("active")&&playThis ){
+                alert('GRA');
+            }
+
+       case "Aplicaciones":
+         
+
+            if ( $(".feature").hasClass("active")&&playThis ){
+                alert('APL');
+            }
+
+       case "Multipantalla":
+            
+
+            if ( $(".feature").hasClass("active")&&playThis ){
+                alert('MUL');
+            }
+
+       case "Emisión":
+            
+
+            if ( $(".feature").hasClass("active")&&playThis ){
+                alert('EMI');
+            }
+
+       case "Sugerencias":
+            // alert('Hey');
+           break;
+
+       default: 
+          
+       break;
+    } 
 
 
 });
@@ -83,15 +146,3 @@ function moveright() {
 
 
 
-// should help to fixing z-index difficulties
-function findHighestZIndex(elem) {
-    var elems = document.getElementsByTagName(elem);
-    var highest = 0;
-    for (var i = 0; i < elems.length; i++) {
-        var zindex = document.defaultView.getComputedStyle(elems[i], null).getPropertyValue("z-index");
-        if ((zindex > highest) && (zindex != 'auto')) {
-            highest = zindex;
-        }
-    }
-    return highest;
-}
