@@ -1,12 +1,9 @@
-function createFeaturesRandomly() {
-
-    var featureNames = ["Buscador inteligente", "Control del directo", "Grabación", "Aplicaciones", "Multipantalla", "Emisión", "Sugerencias"]
-
-
+function createFeaturesRandomly(rightId) {
+    
     // var randomIndex = Math.floor(Math.random()  * (7 - 1) + 1)
 
     function shuffle(array) {
-        var i = array.length,
+        var i = array.length - 1,
             j = 0,
             temp;
 
@@ -14,27 +11,31 @@ function createFeaturesRandomly() {
 
             j = Math.floor(Math.random() * (i + 1));
 
-            // swap randomly chosen element with current element
+            // swap randomly chosen element with current element    
             temp = array[i];
             array[i] = array[j];
             array[j] = temp;
-
+            
         }
 
         return array;
     }
 
-    var randNames = shuffle(featureNames);
-    // console.log(randNames);
+    var randNames = featureNames.slice();
+    randNames.splice(rightId, 1);
+    randNames = shuffle(randNames);
 
+    var rightAnswerID = Math.floor(Math.random() * 3);
+    console.log(rightId);    
+    randNames.splice(rightAnswerID, 0, featureNames[rightId]);
+    
+    console.log(randNames);    
 
+    $(".feature").removeClass("rightAnswer");
+    $(".feature:nth-child(" + (rightAnswerID + 1) + ")").addClass("rightAnswer");
 
-    $(".feature:nth-child(1)").html(randNames[0]);
-    $(".feature:nth-child(2)").html(randNames[1]);
-    $(".feature:nth-child(3)").html(randNames[2]);
-
-
-
-
-
+    for(var i = 0; i < 3; i++) {
+        var button = $(".feature:nth-child(" + (i+1) + ")");
+        button.html(randNames[i]);       
+    }
 }

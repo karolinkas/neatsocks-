@@ -1,8 +1,16 @@
 // navigate through features via mobile
 
+var games = new Array();
+var currentGameId = 0;
+var currentGame;
+var featureNames = ["Buscador inteligente", "Control del directo", "Grabación", "Aplicaciones", "Multipantalla", "Emisión", "Sugerencias"];
+
 $(function() {
 
-    createFeaturesRandomly();
+    games.push(new FeatureSearch());
+    games.push(new FeatureControl());
+
+
 
     $(".feature:nth-child(2)").addClass("active");
 
@@ -39,14 +47,14 @@ $(function() {
     dispatcher.bind('go_left',
         function() {
 
-            var selected = $(".feature.active");
+            var selectedNow = $(".feature.active");
 
             if ($(".feature:first").hasClass("active")) {
                 $(".feature:last").addClass("active");
                 $(".feature:first").removeClass("active")
             } else {
-                selected.prev(".feature").addClass("active");
-                selected.removeClass("active");
+                selectedNow.prev(".feature").addClass("active");
+                selectedNow.removeClass("active");
             }
         })
 
@@ -64,69 +72,30 @@ $(function() {
             }
         })
 
-    var playThis = new Boolean();
+    
     var chosenFeature = "";
 
     $('#enter').click(function(){
-        var playThis = true;
+        //CHECK FEATURES
+        checkFeatureButtons();
         }
     )
 
-    
-
-    var chosenFeature = $(".feature").html(); 
-    switch (chosenFeature)
-    {
-       case "Buscador inteligente":
-
-            if ( $(".feature").hasClass("active")&&playThis ){
-                alert('BUS');
-            }
-
-       case "Control del directo":
-            
-            if ( $(".feature").hasClass("active")&&playThis ){
-                alert('CON');
-            }
-
-       case "Grabación":   
-
-            if ( $(".feature").hasClass("active")&&playThis ){
-                alert('GRA');
-            }
-
-       case "Aplicaciones":
-         
-
-            if ( $(".feature").hasClass("active")&&playThis ){
-                alert('APL');
-            }
-
-       case "Multipantalla":
-            
-
-            if ( $(".feature").hasClass("active")&&playThis ){
-                alert('MUL');
-            }
-
-       case "Emisión":
-            
-
-            if ( $(".feature").hasClass("active")&&playThis ){
-                alert('EMI');
-            }
-
-       case "Sugerencias":
-            // alert('Hey');
-           break;
-
-       default: 
-          
-       break;
-    } 
-
-
+    currentGame = games[currentGameId];
+    currentGame.init();
 });
+
+function nextFeature() {
+    currentGameId++;
+    currentGame = games[currentGameId];
+    currentGame.init(); 
+}
+
+function checkFeatureButtons() {
+    var isRightAnswer = $(".feature.active").hasClass("rightAnswer");
+    currentGame.featureAnswer(isRightAnswer);
+}
+
 // Here we send the message in the websocket
 function send(message) {
     dispatcher.trigger('new_message', message);
