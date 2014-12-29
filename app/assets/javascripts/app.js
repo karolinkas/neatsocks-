@@ -104,12 +104,10 @@ function send(message) {
 // we are sendind the direction command
 function moveleft() {
     dispatcher.trigger('go_left');
-
 }
 
 function moveright() {
     dispatcher.trigger('go_right');
-
 }
 
 
