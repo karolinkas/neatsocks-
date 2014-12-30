@@ -1,35 +1,60 @@
 function searchOnType() {
 
-	$("#userinput").show();
+    $("#userinput").show();
 
-  $("#bill").keyup(function() {
+    $("#bill").keyup(function() {
 
-          string = $(this).val();
-      
-      	if (string.toUpperCase() === "Bil".toUpperCase()){
+        string = $(this).val();
 
-      		loadSuggestions();
+        if (string.toUpperCase() === "Bil".toUpperCase()) {
 
+            loadSuggestions();
 
-      		donePlaying = true;
-      	}	   
+        }
     });
-	}
+    return donePlaying;
+}
 
 function loadSuggestions() {
-	var parent = $(".suggestions");
-  var answers = parent.children();
-  while (answers.length) {
-      parent.append(answers.splice(Math.floor(Math.random() * answers.length), 1)[0]);
-  }
+
+    var parent = $(".suggestions");
+    var answers = parent.children();
+    while (answers.length) {
+        parent.append(answers.splice(Math.floor(Math.random() * answers.length), 1)[0]);
+    }
+
+    $(".suggestions").show();
+
+    animateIn();
 
 
-	$(".suggestions").show();
+    $(".answer").click(function() {
 
-	TweenMax.staggerFrom(".answer", 2, {scale:0.5, opacity:0, delay:0.25, ease:Elastic.easeOut, force3D:true}, 0.2);
+        if ($(".answer").hasClass("rightAnswer")) {
 
-	$(".answer").click(function(){
-	  TweenMax.staggerTo(".answer", 0.25, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
-	});
-	
+            donePlaying = true;
+            animateOut();
+            console.log("fuck I´m done");
+
+        }
+    });
+    return donePlaying;
+}
+
+function animateIn() {
+    TweenMax.staggerFrom(".answer", 2, {
+        scale: 0.5,
+        opacity: 0,
+        delay: 0.25,
+        ease: Elastic.easeOut,
+        force3D: true
+    }, 0.2);
+}
+
+function animateOut() {
+    TweenMax.staggerTo(".answer", 0.25, {
+        opacity: 0,
+        y: -100,
+        ease: Back.easeIn
+    }, 0.1);
 }

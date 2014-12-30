@@ -9,15 +9,15 @@ function FeatureSearch() {
 	}
 
 	this.featureAnswer = function(isRight) {
+		
 		if (isRight) {
-			console.log("YESSSSSS");
-			searchOnType();
-			
 			if (donePlaying){
-
+			
 				nextFeature();
 				
 			}
+			console.log("YESSSSSS");
+			searchOnType();
 		} else console.log("NOOOOO :(");
 
 
