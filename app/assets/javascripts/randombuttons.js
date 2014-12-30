@@ -1,5 +1,6 @@
 function createFeaturesRandomly(rightId) {
 
+
     function shuffle(array) {
         var i = array.length - 1,
             j = 0,
@@ -13,11 +14,12 @@ function createFeaturesRandomly(rightId) {
             temp = array[i];
             array[i] = array[j];
             array[j] = temp;
-            
+
         }
 
         return array;
     }
+
     // creates duplicate of featureNames-Array
     var randNames = featureNames.slice();
     // remove one element in the position of the one with the right answer
@@ -29,13 +31,13 @@ function createFeaturesRandomly(rightId) {
     var rightAnswerID = Math.floor(Math.random() * 3);
     // add the shuffled element to the array that allready contains the     
     randNames.splice(rightAnswerID, 0, featureNames[rightId]);
-           
+
 
     $(".feature").removeClass("rightAnswer");
     $(".feature:nth-child(" + (rightAnswerID + 1) + ")").addClass("rightAnswer");
 
-    for(var i = 0; i < 3; i++) {
-        var button = $(".feature:nth-child(" + (i+1) + ")");
-        button.html(randNames[i]);       
+    for (var i = 0; i < 3; i++) {
+        var button = $(".feature:nth-child(" + (i + 1) + ")");
+        button.html(randNames[i]);
     }
 }

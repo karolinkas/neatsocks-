@@ -17,8 +17,12 @@ function searchOnType() {
 	}
 
 function loadSuggestions() {
-	var answerarray = $(".answer");
-	shuffle(answerarray); 
+	var parent = $(".suggestions");
+  var answers = parent.children();
+  while (answers.length) {
+      parent.append(answers.splice(Math.floor(Math.random() * answers.length), 1)[0]);
+  }
+
 
 	$(".suggestions").show();
 
