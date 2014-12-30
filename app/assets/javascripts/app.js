@@ -33,7 +33,8 @@ $(function() {
     // step to next game
         currentGameId++;
         currentGame = games[currentGameId];
-        currentGame.init(); 
+        currentGame.init();
+
     }
 
     //check feature buttons for the right answer 
@@ -41,6 +42,8 @@ $(function() {
 
         var isRightAnswer = $(".feature.active").hasClass("rightAnswer");
         currentGame.featureAnswer(isRightAnswer);
+        
+
 }
 
 

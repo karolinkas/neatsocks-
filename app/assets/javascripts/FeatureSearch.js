@@ -11,14 +11,16 @@ function FeatureSearch() {
 	this.featureAnswer = function(isRight) {
 		if (isRight) {
 			console.log("YESSSSSS");
+			
+				searchOnType();
+
 			nextFeature();
 		} else console.log("NOOOOO :(");
+
+
 	}
 
-	this.loadUserinput = function(){
-		console.log("Am I searching allready?")
-		// searchOnType();
-	}
+
 
 
 }
