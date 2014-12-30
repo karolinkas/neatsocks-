@@ -1,4 +1,5 @@
 function FeatureSearch() {
+	
 	var self = this;
 	this.id = 0;
 
@@ -13,4 +14,11 @@ function FeatureSearch() {
 			nextFeature();
 		} else console.log("NOOOOO :(");
 	}
+
+	this.loadUserinput = function(){
+		console.log("Am I searching allready?")
+		// searchOnType();
+	}
+
+
 }

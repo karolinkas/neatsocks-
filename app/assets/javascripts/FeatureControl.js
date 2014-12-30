@@ -4,6 +4,7 @@ function FeatureControl() {
 
 	this.init = function() {
 		createFeaturesRandomly(self.id);
+		console.log("INIT CONTROL");
 	}
 
 
@@ -15,4 +16,6 @@ function FeatureControl() {
 	this.specificFunction = function() {
 		console.log("YESSSSSS");
 	}
+
+	
 }
