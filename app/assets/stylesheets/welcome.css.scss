@@ -206,3 +206,34 @@ div#userinput{
 
 	}
 }
+
+.answer {
+  border: none;
+  text-align:center;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  background-color: #C4C2C1;
+  border: solid 1px transparent;
+  border-radius:10px;
+  -webkit-font-smoothing: antialiased;
+  color:white;
+}
+
+.suggestions {
+  position:absolute;
+  left: 2em;
+  width:330px;
+  margin:auto;
+  overflow:hidden;
+  height:90%;
+  list-style-type: none;
+
+}
+
+

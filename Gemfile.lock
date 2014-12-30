@@ -71,6 +71,7 @@ GEM
     formtastic (3.1.2)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.1.1)
+    greensock-rails (1.15.0.0)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -191,6 +192,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   coffee-rails (~> 4.0.0)
+  greensock-rails (~> 1.15.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   neat

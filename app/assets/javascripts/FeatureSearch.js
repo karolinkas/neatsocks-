@@ -11,10 +11,13 @@ function FeatureSearch() {
 	this.featureAnswer = function(isRight) {
 		if (isRight) {
 			console.log("YESSSSSS");
+			searchOnType();
 			
-				searchOnType();
+			if (donePlaying){
 
-			nextFeature();
+				nextFeature();
+				
+			}
 		} else console.log("NOOOOO :(");
 
 

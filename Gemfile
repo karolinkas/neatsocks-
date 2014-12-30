@@ -35,6 +35,8 @@ gem 'neat'
 gem 'shortener'
 
 gem 'activeadmin', github: 'activeadmin'
+
+gem 'greensock-rails', '~> 1.15.0.0'
 # Use unicorn as the app server
 # gem 'unicorn'
 
