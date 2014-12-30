@@ -43,7 +43,7 @@ $(function() {
     function checkFeatureButtons() {
 
         var isRightAnswer = $(".feature.active").hasClass("rightAnswer");
-        currentGame.featureAnswer(isRightAnswer);
+        currentGame.featureAnswer(isRightAnswer,donePlaying);
         
 
 }

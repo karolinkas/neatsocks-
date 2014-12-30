@@ -8,9 +8,10 @@ function FeatureSearch() {
 		createFeaturesRandomly(self.id);
 	}
 
-	this.featureAnswer = function(isRight) {
-		
+	this.featureAnswer = function(isRight,donePlaying) {
+
 		if (isRight) {
+			console.log("playing");
 			if (donePlaying){
 			
 				nextFeature();
