@@ -20,34 +20,36 @@ $(function() {
     games.push(new FeatureControl());
 
 
-    $('#enter').click(function(){
-        
+    $('#enter').click(function() {
+
         checkFeatureButtons();
-        }
-    )
+    })
 
     currentGame = games[currentGameId];
     // initialise what has to be prepared for the game
     currentGame.init();
-    });
+});
 
-    function nextFeature() {
+function nextFeature() {
     // step to next game
-        currentGameId++;
-        currentGame = games[currentGameId];
-        currentGame.init();
-
-    }
-
-    //check feature buttons for the right answer 
-    function checkFeatureButtons() {
-
-        var isRightAnswer = $(".feature.active").hasClass("rightAnswer");
-        currentGame.featureAnswer(isRightAnswer,donePlaying);
-        
+    currentGameId++;
+    currentGame = games[currentGameId];
+    currentGame.init();
 
 }
 
+//check feature buttons for the right answer 
+function checkFeatureButtons() {
+
+    var isRightAnswer = $(".feature.active").hasClass("rightAnswer");
+    currentGame.featureAnswer(isRightAnswer);
+}
+
+function playTheGame() {
+
+    var rightSelection = $("").hasClass("rightAnswer");
+    currentGame.play(rightSelection);
 
 
 
+}

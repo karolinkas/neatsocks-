@@ -29,15 +29,15 @@ function loadSuggestions() {
 
 
     $(".answer").click(function() {
-   
+
         if ( $(this).hasClass("rightAnswer") ) {
 
             donePlaying = true;
             animateOut();
             alert("perfectly right");
 
-        } else{
-        		alert("you are so wrong");
+        } else {
+            alert("you are so wrong");
         }
     });
     return donePlaying;

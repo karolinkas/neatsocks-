@@ -8,22 +8,27 @@ function FeatureSearch() {
 		createFeaturesRandomly(self.id);
 	}
 
-	this.featureAnswer = function(isRight,donePlaying) {
+	this.featureAnswer = function(isRight) {
 
 		if (isRight) {
-			console.log("playing");
+			this.play();
+			console.log("YESSSSSS");
+
+		} else {console.log("NOOOOO :(");
+	}
+
+	}
+
+	this.play = function(donePlaying){
+		
+			searchOnType();
+
 			if (donePlaying){
 			
 				nextFeature();
 				
 			}
-			console.log("YESSSSSS");
-			searchOnType();
-		} else console.log("NOOOOO :(");
-
-
-	}
-
+	} 
 
 
 

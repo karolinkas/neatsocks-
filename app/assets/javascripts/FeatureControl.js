@@ -8,7 +8,7 @@ function FeatureControl() {
 	}
 
 
-	this.featureAnswer = function(isRight,featureAnswer) {
+	this.featureAnswer = function(isRight) {
 		if (isRight) this.specificFunction();
 		else console.log("NOOOOO :(");
 	}
