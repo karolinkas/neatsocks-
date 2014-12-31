@@ -9,9 +9,9 @@ function FeatureSearch() {
 	}
 
 	this.featureAnswer = function(isRight) {
-
+		var rightSelection = $(".answer").hasClass("rightAnswer");
 		if (isRight) {
-			this.play();
+			this.play(rightSelection);
 			console.log("YESSSSSS");
 
 		} else {console.log("NOOOOO :(");
@@ -19,12 +19,12 @@ function FeatureSearch() {
 
 	}
 
-	this.play = function(donePlaying){
-		
-			searchOnType();
-
-			if (donePlaying){
+	this.play = function(rightSelection){
 			
+			searchOnType();
+			alert("I play");
+			if (rightSelection){
+			alert("I played");
 				nextFeature();
 				
 			}

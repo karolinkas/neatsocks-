@@ -28,6 +28,7 @@ $(function() {
     currentGame = games[currentGameId];
     // initialise what has to be prepared for the game
     currentGame.init();
+
 });
 
 function nextFeature() {
@@ -40,16 +41,11 @@ function nextFeature() {
 
 //check feature buttons for the right answer 
 function checkFeatureButtons() {
-
+    // returns Boolean!!  
     var isRightAnswer = $(".feature.active").hasClass("rightAnswer");
     currentGame.featureAnswer(isRightAnswer);
-}
-
-function playTheGame() {
-
-    var rightSelection = $("").hasClass("rightAnswer");
-    currentGame.play(rightSelection);
-
-
 
 }
+
+
+
