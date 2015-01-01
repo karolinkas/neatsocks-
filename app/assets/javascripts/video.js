@@ -1,11 +1,9 @@
+
+
 function Video(){
 
-	
-
-	this.play = function(){
-		
+	this.play = function(){		
 		document.getElementById('introvideo').play();	
-		console.log(currentTime);
 	}
 
 	this.pause = function(){
