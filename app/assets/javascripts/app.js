@@ -9,7 +9,6 @@ var currentGame;
 
 var featureNames = ["Buscador inteligente", "Control del directo", "Grabación", "Aplicaciones", "Multipantalla", "Emisión", "Sugerencias"];
 
-var donePlaying = false;
 
 $(function() {
 

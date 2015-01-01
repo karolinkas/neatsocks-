@@ -9,8 +9,11 @@ function FeatureSearch() {
 	}
 
 	this.featureAnswer = function(isRight) {
-		var rightSelection = $(".answer").hasClass("rightAnswer");
+		
+
 		if (isRight) {
+
+			var rightSelection = $(".answer").hasClass("rightAnswer");
 			this.play(rightSelection);
 			console.log("YESSSSSS");
 
@@ -21,10 +24,11 @@ function FeatureSearch() {
 
 	this.play = function(rightSelection){
 			
+		
 			searchOnType();
-			alert("I play");
+		
 			if (rightSelection){
-			alert("I played");
+	
 				nextFeature();
 				
 			}

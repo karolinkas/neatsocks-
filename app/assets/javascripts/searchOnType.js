@@ -12,7 +12,7 @@ function searchOnType() {
 
         }
     });
-    return donePlaying;
+  
 }
 
 function loadSuggestions() {
@@ -31,16 +31,18 @@ function loadSuggestions() {
     $(".answer").click(function() {
 
         if ( $(this).hasClass("rightAnswer") ) {
-
-            donePlaying = true;
+       
             animateOut();
             alert("perfectly right");
+
+            $("#userinput").delay(1000).hide(0);
+
 
         } else {
             alert("you are so wrong");
         }
     });
-    return donePlaying;
+  
 }
 
 function animateIn() {

@@ -1,0 +1,28 @@
+@import "bourbon";
+@import "neat";
+
+	$grid-columns: 5;
+
+#icon-container{
+	@include outer-container();
+	padding-left: 153px;
+	padding-top: 193px;
+}
+
+.dashboard-item{
+	@include span-columns(1);
+		img{
+	max-width: 170%;
+	height: auto;	
+	}
+}
+
+
+.dashboard-item:nth-child(1){	
+	// @include shift(1);
+}
+
+
+.dashboard-item:nth-child(2){
+		margin-top: 3.5%;
+	}

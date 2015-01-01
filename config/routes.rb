@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get "analytics/index" => 'analytics#index'
 
+  get "/dashboard" => "welcome#dashboard"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

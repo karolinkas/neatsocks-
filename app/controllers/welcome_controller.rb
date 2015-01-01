@@ -6,4 +6,7 @@ class WelcomeController < ApplicationController
   def remote
   end
 
+  def dashboard
+  end
+
 end
