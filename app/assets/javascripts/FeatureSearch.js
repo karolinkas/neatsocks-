@@ -25,13 +25,13 @@ function FeatureSearch() {
 	this.play = function(rightSelection){
 			
 		
-			searchOnType();
-		
-			if (rightSelection){
+		searchOnType();
 	
-				nextFeature();
-				
-			}
+		if (rightSelection){
+
+			nextFeature();
+			
+		}
 	} 
 
 

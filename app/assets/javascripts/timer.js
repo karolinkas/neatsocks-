@@ -10,7 +10,6 @@ $(function() {
 })
 
 
-
 var Timer;
 var TotalSeconds;
 
