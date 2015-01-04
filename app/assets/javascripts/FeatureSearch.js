@@ -2,6 +2,7 @@ function FeatureSearch() {
 	
 	var self = this;
 	this.id = 0;
+	var rightSelection = $(".answer").hasClass("rightAnswer");
 
 	this.init = function() {
 		console.log("INIT SEARCH");
@@ -13,7 +14,6 @@ function FeatureSearch() {
 
 		if (isRight) {
 
-			var rightSelection = $(".answer").hasClass("rightAnswer");
 			this.play(rightSelection);
 			console.log("YESSSSSS");
 
@@ -28,7 +28,7 @@ function FeatureSearch() {
 		searchOnType();
 	
 		if (rightSelection){
-
+		
 			nextFeature();
 			
 		}

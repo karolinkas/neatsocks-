@@ -16,9 +16,13 @@ function searchOnType() {
 }
 
 function loadSuggestions() {
-
+    
+    $(".answer:nth-child(1)").addClass("rightAnswer");
+      
     var parent = $(".suggestions");
     var answers = parent.children();
+
+    // shuffling suggestions
     while (answers.length) {
         parent.append(answers.splice(Math.floor(Math.random() * answers.length), 1)[0]);
     }
@@ -29,17 +33,18 @@ function loadSuggestions() {
 
 
     $(".answer").click(function() {
+        
 
         if ( $(this).hasClass("rightAnswer") ) {
        
             animateOut();
-            alert("perfectly right");
+      
 
             $("#userinput").delay(1000).hide(0);
 
 
         } else {
-            alert("you are so wrong");
+ 
         }
     });
   

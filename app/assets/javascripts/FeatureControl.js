@@ -9,12 +9,13 @@ function FeatureControl() {
 
 
 	this.featureAnswer = function(isRight) {
-		if (isRight) this.specificFunction();
+		if (isRight) this.play();
 		else console.log("NOOOOO :(");
 	}
 
-	this.specificFunction = function() {
+	this.play = function() {
 		console.log("YESSSSSS");
+ 		$("#videocontainer").show();
 	}
 
 	
