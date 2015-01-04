@@ -17,7 +17,7 @@ function searchOnType() {
 
 function loadSuggestions() {
     
-    $(".answer:nth-child(1)").addClass("rightAnswer");
+    $(".answer:nth-child(1)").addClass("rightSelection");
       
     var parent = $(".suggestions");
     var answers = parent.children();
@@ -35,7 +35,7 @@ function loadSuggestions() {
     $(".answer").click(function() {
         
 
-        if ( $(this).hasClass("rightAnswer") ) {
+        if ( $(this).hasClass("rightSelection") ) {
        
             animateOut();
       

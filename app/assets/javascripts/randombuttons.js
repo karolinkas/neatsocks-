@@ -31,7 +31,7 @@ function createFeaturesRandomly(rightId) {
     var rightAnswerID = Math.floor(Math.random() * 3);
     // add the shuffled element to the array that allready contains the     
     randNames.splice(rightAnswerID, 0, featureNames[rightId]);
-
+    // console.log(randNames);
 
     $(".feature").removeClass("rightAnswer");
     $(".feature:nth-child(" + (rightAnswerID + 1) + ")").addClass("rightAnswer");

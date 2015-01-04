@@ -1,28 +1,37 @@
 @import "bourbon";
 @import "neat";
-
+	
 	$grid-columns: 5;
+	$max-width: em(1055);
+	// $column: golden-ratio(1em, 3);
 
 #icon-container{
 	@include outer-container();
-	padding-left: 153px;
-	padding-top: 193px;
+	margin-top: 15em;
+
 }
 
 .dashboard-item{
-	@include span-columns(1);
 		img{
-	max-width: 170%;
-	height: auto;	
+			max-width: 26%;
+			height: auto;	
 	}
 }
 
 
-.dashboard-item:nth-child(1){	
-	// @include shift(1);
-}
-
+.dashboard-item:nth-child(1){
+	margin-left: 4em;
+	}
 
 .dashboard-item:nth-child(2){
-		margin-top: 3.5%;
+	img{
+			max-width: 34%;
+			// padding: 3em;
+		}
 	}
+	.dashboard-item:nth-child(3){
+	img{
+			margin-left: 1em;
+		}
+	}
+

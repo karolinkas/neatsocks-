@@ -23,10 +23,9 @@ function FeatureSearch() {
 	}
 
 	this.play = function(rightSelection){
-			
-		
+
 		searchOnType();
-	
+				
 		if (rightSelection){
 		
 			nextFeature();

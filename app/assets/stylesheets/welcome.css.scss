@@ -5,7 +5,7 @@
 @import "bourbon";
 @import "neat";
 
-$grid-columns: 5;
+$grid-columns: 3;
 
 .container{
 	@include outer-container();
@@ -143,7 +143,11 @@ $grid-columns: 5;
 }
 
 body{
-	background: #C4C2C1;
+	background-image: asset-url("00_home_no_login.jpg");
+	 background-size: 100%;
+	 opacity: 0.3;
+	 background-repeat: no-repeat; 
+	// background: #C4C2C1;
 }
 
 #messages{
