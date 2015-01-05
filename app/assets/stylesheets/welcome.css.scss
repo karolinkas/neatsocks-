@@ -2,229 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "bourbon";
-@import "neat";
+html body{
+	margin: 0;
+}
 
-$grid-columns: 3;
-
-.container{
-	@include outer-container();
-		min-width: 80%;
-		max-width: 95%;
-
-	.logo{
-			height: 27%;
-			@include span-columns(1);
-		
-		img{
-			max-width:130%;
-			height:auto;
-		}
-	}
-
-	.empty1{
-		height: 2em;
-
-		@include span-columns(2);
-	}
-
-
-	.menu{
+.backgroundimage{
+	max-width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.background-top{
+		width: 100%;
 		height: 6em;
-		@include span-columns(2);
-		@include omega();
-			img{
-				position: fixed;
-				top: -1em;
-				right: 1em;
-				width: 23em;
-			}
+		margin-top: -1em; 
 	}
-
-	.empty2{
-		background: white;
-		opacity: 0.7;
-		@include span-columns(1);
+	.background-middle{
+		margin-top: -1em; 
 	}
-
-	.screen{
-		min-width: 38em;
-		max-width: 40em;
-		margin-top:5%;
-		margin-bottom: 3%; 
-		@include span-columns(3);
-		@include omega();
-			
-			img{
-		}
-
-	}
-
-	.empty3{
-		background: white;
-		opacity: 0.7;
-		@include span-columns(1);
-	}
-
-	.ontable{
-		height: 2px;
-		margin-top: -10%;
-		@include span-columns(5);
-		z-index: 1500;
-	}
-
-	.image{
-		height: 12em;
-		margin-top:1em;
-		margin-right: 2em;
-		@include shift(1);
-		@include span-columns(1 of 5);
-	}
-
-	.player{
-		height: 6em;	
-		@include span-columns(1 of 5);
-	}
-
-	.lamp{
-		margin-left: 10%;
-		max-width: 10%;	
-		height: auto;
-		@include span-columns(1 of 5);
-		@include omega();
-			img{
-
-		}
-
-	}
-
-	
-	.table{
-		opacity: 0.7;
-		height: 12em;
-		@include span-columns(5);
-		@include omega();
-			img{
-				max-width: 86em;
-				margin-top: -46em;
-				z-index: 1500;
-			}
-		.buttonbox{
-			position: relative;
-			margin-top: 8%;
-			left:23%;
-
-			button.feature{
-				width: 20em;
-				margin: 1em;
-			
-			}
-			button.feature.active{
-				background: MEDIUMSPRINGGREEN;
-			
-			}
-		}
-	}
-
-
-	img{
-		max-width: 100%;
-	}
-
-	#logodown{
-			margin-top: -8.5em;
-			max-width: 20em;
-			height: auto;
-			z-index: -1000;
-			@include span-columns(2);
-			@include shift(4);
-	}
-
-}
-
-body{
-		// background-image: asset-url("00_home_no_login.jpg");
-	 //  background-size: 100%;
-	 //  background-repeat: no-repeat; 
-		// opacity: 0.3;
-		font-family: 'Trebuchet MS';
-		background: #C4C2C1;
-}
-
-html { 
-  // background: asset-url("00_home_no_login.jpg") no-repeat center center fixed; 
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
-}
-
-#messages{
-	color: grey;
-}
-
-#echo{
-	margin-top:5em;
-	@include span-columns(5);
-
-	#timetogo{
-		width: 100px;
-		height: 30px;
-		background: turquoise;
+	.background-bottom{
+		margin-top: -1em; 
 	}
 }
-
-div#userinput{
-	background: NAVAJOWHITE;
-	width: 450px;
-	height: 200px;
-	position: absolute;
-	top:35%;
-	left:31%;
-
-	input#bill{
-		margin-left: 111px;
-		margin-top: 70px;
-		width: 230px;
-		height: 50px;
-		border:0;
-		padding: 10px;
-		font-size: 2em;
-		color:grey;
-
-	}
-}
-
-.answer {
-	font-family: Arial;
-  border: none;
-  text-align:center;
-  cursor: pointer;
-  padding: 5px 10px;
-  margin: 5px 10px;
-  text-transform: uppercase;
-  font-weight: 500;
-  outline: none;
-  position: relative;
-  background-color: #C4C2C1;
-  border: solid 1px transparent;
-  color:white;
-}
-
-.suggestions {
-  position:absolute;
-  left: 2em;
-  width:330px;
-  margin:auto;
-  overflow:hidden;
-  height:90%;
-  list-style-type: none;
-
-}
-
-#videocontainer{
-	position: absolute;
-	top: 11em;
-	left: 22.7em;
-}
-

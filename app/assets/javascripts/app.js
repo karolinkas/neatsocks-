@@ -13,7 +13,7 @@ var featureNames = ["Buscador inteligente", "Control del directo", "Grabación",
 
 $(function() {
 
-    // $("#videocontainer").hide();
+    $("#videocontainer").hide();
     $("#userinput").hide();
     $(".suggestions").hide();
     // create Objects to be added to games array for each feature so you can call each game when you access the array
