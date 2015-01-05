@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   get "/dashboard" => "welcome#dashboard"
 
+  get "/dashboard" => "welcome#how_to_play"
+
+  get "/dashboard" => "welcome#prices"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

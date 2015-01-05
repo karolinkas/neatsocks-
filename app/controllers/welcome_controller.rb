@@ -9,4 +9,10 @@ class WelcomeController < ApplicationController
   def dashboard
   end
 
+  def prices
+  end
+
+  def how_to_play
+  end
+
 end

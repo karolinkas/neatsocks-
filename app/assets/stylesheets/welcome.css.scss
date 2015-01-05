@@ -143,11 +143,20 @@ $grid-columns: 3;
 }
 
 body{
-	background-image: asset-url("00_home_no_login.jpg");
-	 background-size: 100%;
-	 opacity: 0.3;
-	 background-repeat: no-repeat; 
-	// background: #C4C2C1;
+		// background-image: asset-url("00_home_no_login.jpg");
+	 //  background-size: 100%;
+	 //  background-repeat: no-repeat; 
+		// opacity: 0.3;
+		font-family: 'Trebuchet MS';
+		background: #C4C2C1;
+}
+
+html { 
+  // background: asset-url("00_home_no_login.jpg") no-repeat center center fixed; 
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 }
 
 #messages{

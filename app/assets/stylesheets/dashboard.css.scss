@@ -7,7 +7,9 @@
 
 #icon-container{
 	@include outer-container();
-	margin-top: 15em;
+	// margin-left: 10%;
+	// margin-right: 10%;
+	margin-bottom: 10%;
 
 }
 
@@ -21,15 +23,17 @@
 
 .dashboard-item:nth-child(1){
 	margin-left: 4em;
+	@include shift(1);
 	}
 
 .dashboard-item:nth-child(2){
 	img{
-			max-width: 34%;
-			// padding: 3em;
+			max-width: 35%;
+		
 		}
 	}
 	.dashboard-item:nth-child(3){
+		@include omega();
 	img{
 			margin-left: 1em;
 		}
