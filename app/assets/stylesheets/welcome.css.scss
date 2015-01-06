@@ -2,25 +2,143 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html body{
-	margin: 0;
+body, html{height:100%;width:100%;padding:0;margin:0;}
+
+#ViewContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	min-height: 600px;
+	overflow: hidden;
 }
 
 .backgroundimage{
-	max-width: 100%;
-	height: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
+		height:100%;
+		width:100%;
+
 	.background-top{
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		height: 6em;
-		margin-top: -1em; 
+		height: 86px;
+		padding-bottom: 6%; 
+		background-image:url(background-up.png);
+		background-repeat: no-repeat;	
+		background-position: center;
 	}
 	.background-middle{
-		margin-top: -1em; 
+    position: absolute;
+    top: 86px;
+		width: 90em;
+		height: 80%;
+		background-image:url(background-middle.jpg);
+		background-repeat: no-repeat;
+		background-position: center;	
+
 	}
 	.background-bottom{
-		margin-top: -1em; 
+	 	width: 100%;
+		height: 100px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-image:url(background-bottom.png);
+		background-repeat: no-repeat;
+		background-position: center;	
 	}
 }
+
+.logo{
+		position: absolute;
+		top: 0;
+		max-width: 20%;
+		height: auto; 
+		z-index:1000;
+}
+
+.logodown{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		max-width: 20%;
+		height: auto;
+		z-index: 3000; 
+}
+
+.tablestuff{
+	position: absolute;
+	bottom: 48px;
+	left: 50%;
+	margin-left: -43%; 
+	max-width: 80%; 
+}
+
+#ButtonContainer {
+	position: absolute;
+	left: 50%;
+	
+	z-index:5000;
+	bottom: 6%;
+	width: 86%;
+	margin-left: -38%;
+	height: 30%;
+}
+
+.featureButton{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.featureButton:nth-child(2){
+	margin-left: -5.5%;
+}
+
+.featureButton:nth-child(3){
+	margin-left: -5.5%;
+}
+
+.featureButton .normal{
+	background-image:url(feature_button_side.png);
+	display:block;
+}
+.featureButton:hover .normal{
+	display:none;
+}
+.featureButton .active{
+	background-image:url(feature_button_side_active.png);
+	display:none;
+}
+.featureButton:hover .active{
+	display:block;
+}
+.featureButton:nth-child(2) .normal{
+	background-image:url(feature_button_middle.png);
+}
+.featureButton:nth-child(2) .active{
+	background-image:url(feature_button_middle_active.png);
+}
+.featureButton:nth-child(3) .normal{
+	background-image:url(feature_button_side.png);
+}
+.featureButton:nth-child(3) .active{
+	background-image:url(feature_button_side_active.png);
+}
+.featureButton:nth-child(3) div {
+	-moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.featureButton div {
+	background-repeat: no-repeat;	
+	background-size: 100% 100%;
+	width:100%;
+	height:100%;
+}
+
+
